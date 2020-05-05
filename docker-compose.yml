@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  idp:
+    build:
+      context: "./"
+      dockerfile: Dockerfile
+    env_file:
+      - "..env"
+    container_name: python3-saml-sp
+    # command: >
+    #   bash -c "python idp.py idp_conf"
