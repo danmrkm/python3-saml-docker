@@ -1,0 +1,30 @@
+{
+  "strict": false,
+  "debug": true,
+  "sp": {
+    "entityId": "https://python3-saml.local/metadata/",
+    "assertionConsumerService": {
+      "url": "https://python3-saml.local/?acs",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+    },
+    "singleLogoutService": {
+      "url": "https://python3-saml.local/?sls",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+    },
+    "NameIDFormat": "urn:oasis:names:tc:SAML:2.0:nameid-format:transient",
+    "x509cert": "",
+    "privateKey": ""
+  },
+  "idp": {
+    "entityId": "https://idp.simplesamlphp.local:8443/simplesaml/saml2/idp/metadata.php",
+    "singleSignOnService": {
+      "url": "https://idp.simplesamlphp.local:8443/simplesaml/saml2/idp/SSOService.php",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+    },
+    "singleLogoutService": {
+      "url": "https://idp.simplesamlphp.local:8443/simplesaml/saml2/idp/SingleLogoutService.php",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+    },
+    "x509cert": "SAML20_IDP_X509_CERT_STRING"
+  }
+}

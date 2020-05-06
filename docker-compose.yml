@@ -1,12 +1,16 @@
 version: '3'
 
 services:
-  idp:
+  saml-sp:
     build:
       context: "./"
       dockerfile: Dockerfile
     env_file:
-      - "..env"
+      - "./.env"
     container_name: python3-saml-sp
-    # command: >
-    #   bash -c "python idp.py idp_conf"
+    command: >
+      bash -c "apachectl -D FOREGROUND"
+    ports:
+      - 50443:443
+    # volumes:
+    #   - ./demo-django:/var/python3-saml/demo-django
